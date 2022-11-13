@@ -6,7 +6,7 @@ function Image(img)
         local caption = pandoc.utils.stringify(doc.meta.caption) --or "Epigraph has not been set"
         local student = pandoc.utils.stringify(doc.meta.student)   --or "Person has not been set"
         local id = pandoc.utils.stringify(doc.meta.id)
-        local comment = "> " .. caption .. "\nName:" .. student .. " AM: " .. id
+        local comment = "> " .. caption .. "Name:" .. student .. " AM: " .. id
         return pandoc.RawInline('markdown',comment)
       end
 end
