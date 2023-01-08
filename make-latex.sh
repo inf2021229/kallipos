@@ -22,6 +22,6 @@ done
 
 pandoc -s latex/*.tex -o book.tex
 pandoc -N --quiet -V geometry:margin=1.2in -V mainfont="NotoSansMono-Regular" -V sansfont="NotoSansMono-Regular" -V monofont="NotoSansMono-Regular" -V fontsize=10pt book.tex --pdf-engine=xelatex --toc -o book.pdf
-
+pandoc --quiet -f latex book.tex -o book.epub
 # sed -i '' 's+Figure+Εικόνα+g' ./latex/ch0*
 
